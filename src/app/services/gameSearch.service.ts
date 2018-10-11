@@ -4,7 +4,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonService } from './common.service';
-import { Round } from './model/rounds';
+import { Round } from '../model/rounds';
 
 @Injectable({
     providedIn: 'root'

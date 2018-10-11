@@ -3,8 +3,8 @@
  * @description - displays data for historical search data
  */
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '../../authentication.service';
-import { GameSearchService } from '../../gameSearch.service';
+import { AuthenticationService } from '../../services/authentication.service';
+import { GameSearchService } from '../../services/gameSearch.service';
 import { Router } from '@angular/router';
 import { Round } from '../../model/rounds';
 
