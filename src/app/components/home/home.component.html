@@ -1,0 +1,41 @@
+<button pButton type="button" label="Logout" (click)="onLogout()"></button>
+
+<p-table [value]="rounds" class="contentsArea">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Id</th>
+            <th>Created</th>
+            <th>Operator Id</th>
+            <th>Game Id</th>
+            <th>Game Name</th>
+            <th>Account ID</th>
+            <th>Status</th>
+            <th>Purchase Mode</th>
+            <th>Client Mode</th>
+            <th>Total Bet</th>
+            <th>Total Win</th>
+            <th>Currency</th>
+            <th>Feature</th>
+            <th>Competition Affected</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-round>
+        <tr>
+            <td>{{round.id}}</td>
+            <td>{{round.created}}</td>
+            <td>{{round.operatorId}}</td>
+            <td>{{round.gameId}}</td>
+            <td>{{round.gameName}}</td>
+            <td>{{round.accountId}}</td>
+            <td>{{round.status}}</td>
+            <td>{{round.purchaseMode}}</td>
+            <td>{{round.clientMode}}</td>
+            <td>{{round.totalBet}}</td>
+            <td>{{round.totalWin}}</td>
+            <td>{{round.currency}}</td>
+            <td>{{round.feature}}</td>
+            <td>{{round.competitionAffected}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+<!--p><a [routerLink]="['/login']" (click) = "onLogout" >Logout</a></p-->

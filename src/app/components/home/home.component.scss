@@ -1,0 +1,20 @@
+p-table {
+    word-break: break-word;
+}
+
+button {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+
+.contentsArea {
+    position: absolute;
+    top: 50px;
+    bottom: 0px;
+    overflow: auto;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
+}

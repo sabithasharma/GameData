@@ -1,0 +1,21 @@
+{
+    "limit": false,
+    "rounds": [
+        {
+            "id": "1808161007380100000",
+            "created": "2018-08-16T10:07:38.309543Z",
+            "operatorId": 7,
+            "gameId": 10020,
+            "gameName": "Route 777",
+            "accountId": "60137",
+            "status": "CLOSED",
+            "purchaseMode": "CLICK-S0",
+            "clientMode": "DESKTOP",
+            "totalBet": "1.00",
+            "totalWin": "0.00",
+            "currency": "EUR",
+            "feature": false,
+            "competitionAffected": false
+        }
+    ]
+}
