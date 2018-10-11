@@ -14,8 +14,7 @@ import { Round } from '../../model/rounds';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  rounds: Round[];
-  date5: Date;
+  private rounds: Round[];
   constructor(private authenticationService: AuthenticationService,
     private gameSearchService: GameSearchService,
     private router: Router) { }

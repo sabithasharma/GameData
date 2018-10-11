@@ -1,17 +1,22 @@
+/**
+ * @Author - Sabitha Sharma L
+ */
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { CommonService } from './common.service';
+import { Round } from './model/rounds';
 
 @Injectable({
     providedIn: 'root'
 })
 export class GameSearchService {
-    gameUrl = 'https://papi-stage.contentmedia.eu/2.0/roundhistory/rounds?accountId=60137&dateFrom=2018-08-16T00:30:10Z&operatorId=7';
-    constructor(public http: HttpClient) { }
+    constructor(public _http: HttpClient, private commonService: CommonService) { }
+    /**
+     * @method searchGameData
+     * @description fetches the data based on authorization from the Url
+     */
     public searchGameData() {
-       /* const httpOptions = {
-            headers: { 'Authorization': localStorage.getItem('token') }
-        };
-        return this.http.get(this.gameUrl, httpOptions);*/ // working
-        return this.http.get(this.gameUrl);
+        const gameUrl = this.commonService.getGameUrl() + this.commonService.getRoundHistoryUrl();
+        return this._http.get<Round[]>(gameUrl);
     }
 }

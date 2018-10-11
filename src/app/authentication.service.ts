@@ -1,18 +1,23 @@
+/**
+ * @Author: Sabitha Sharma L
+ */
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { map, tap } from 'rxjs/operators';
-import { HttpClient } from '@angular/common/http';
+import { Http } from '@angular/http';
+import { map } from 'rxjs/operators';
+import { CommonService } from './common.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
-  loginUrl = 'https://papi-stage.contentmedia.eu/2.0/auth/authenticate';
-  authUrl = '/users/authenticate';
-  constructor(private http: Http) { }
-
-  validateLogin(email: string, password: string) {
-    return this.http.post(this.loginUrl, { email: email, password: password })
+  constructor(private _http: Http, private commonService: CommonService) { }
+/**
+ * @method validateLogin
+ * @description - validates the login based on email and password. Also stores the token in localstorage
+ */
+  public validateLogin(email: string, password: string) {
+    const loginUrl = this.commonService.getGameUrl() + this.commonService.getAuthUrl();
+    return this._http.post(loginUrl, { email: email, password: password })
       .pipe(map(user => {
         // login successful if there's a jwt token in the response
         if (user && user['_body']) {
@@ -24,8 +29,11 @@ export class AuthenticationService {
         return user;
       }));
   }
-
-  logout() {
+/**
+ * @method logout
+ * @description - removes the token from local storage
+ */
+  public logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('token');
   }
