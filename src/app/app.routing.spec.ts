@@ -3,7 +3,6 @@ import { Location } from '@angular/common';
 import { TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
-
 import { HomeComponent } from '@app/components/home/home.component';
 import { LoginComponent } from '@app/components/login/login.component';
 

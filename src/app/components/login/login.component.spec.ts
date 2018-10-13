@@ -13,10 +13,10 @@ describe('LoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ],
-      imports: [ HttpModule, FormsModule, ReactiveFormsModule, RouterTestingModule ]
+      declarations: [LoginComponent],
+      imports: [HttpModule, FormsModule, ReactiveFormsModule, RouterTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

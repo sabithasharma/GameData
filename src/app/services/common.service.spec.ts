@@ -3,9 +3,9 @@ import { CommonService } from './common.service';
 
 describe('CommonService', () => {
 
-const gameUrl = 'https://papi-stage.contentmedia.eu/2.0/';
-const authUrl = 'auth/authenticate';
-const roundHistoryUrl = 'roundhistory/rounds?accountId=60137&dateFrom=2018-08-16T00:30:10Z&operatorId=7';
+  const gameUrl = 'https://papi-stage.contentmedia.eu/2.0/';
+  const authUrl = 'auth/authenticate';
+  const roundHistoryUrl = 'roundhistory/rounds?accountId=60137&dateFrom=2018-08-16T00:30:10Z&operatorId=7';
   beforeEach(() => TestBed.configureTestingModule({
   }));
 
