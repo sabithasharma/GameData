@@ -22,7 +22,7 @@
     <ng-template pTemplate="body" let-round>
         <tr>
             <td>{{round.id}}</td>
-            <td>{{round.created}}</td>
+            <td>{{getFormattedDate(round.created)}}</td>
             <td>{{round.operatorId}}</td>
             <td>{{round.gameId}}</td>
             <td>{{round.gameName}}</td>

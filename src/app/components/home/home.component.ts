@@ -40,4 +40,13 @@ export class HomeComponent implements OnInit {
     });
   }
 
+/**
+ * @method getFormattedDate
+ * @param UTCDate
+ * @description returns the date in readable format
+ */
+  getFormattedDate(UTCDate): any {
+      return new Date(UTCDate).toDateString();
+  }
+
 }
