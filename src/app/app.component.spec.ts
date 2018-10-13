@@ -17,6 +17,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('Historical Game Data');
+    expect(app.title).not.toEqual('Historical');
   });
 
   it('should render h1 tag', async(() => {
