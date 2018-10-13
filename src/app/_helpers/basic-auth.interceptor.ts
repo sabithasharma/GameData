@@ -1,3 +1,8 @@
+/**
+ * Author- Sabitha Sharma L
+ * @description - extends http request and adds auth token to it
+ */
+
 import { Injectable } from '@angular/core';
 import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/common/http';
 import { Observable } from 'rxjs';

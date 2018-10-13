@@ -11,11 +11,11 @@ import { CommonService } from './common.service';
 })
 export class AuthenticationService {
   constructor(private _http: Http, private commonService: CommonService) { }
-/**
- * @method validateLogin
- * @description - validates the login based on email and password. Also stores the token in localstorage
- */
-  public validateLogin(email: string, password: string) {
+  /**
+   * @method validateLogin
+   * @description - validates the login based on email and password. Also stores the token in localstorage
+   */
+  public validateLogin(email: string, password: string): any {
     const loginUrl = this.commonService.getGameUrl() + this.commonService.getAuthUrl();
     return this._http.post(loginUrl, { email: email, password: password })
       .pipe(map(user => {
@@ -29,11 +29,11 @@ export class AuthenticationService {
         return user;
       }));
   }
-/**
- * @method logout
- * @description - removes the token from local storage
- */
-  public logout() {
+  /**
+   * @method logout
+   * @description - removes the token from local storage
+   */
+  public logout(): void {
     // remove user from local storage to log user out
     localStorage.removeItem('token');
   }

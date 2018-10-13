@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -36,18 +36,16 @@ export class LoginComponent implements OnInit {
 
   get f() { return this.loginForm.controls; }
 
-/**
- * @method - onSubmit
- * @description - called when user click on login button
- */
-  onSubmit() {
+  /**
+   * @method - onSubmit
+   * @description - called when user click on login button
+   */
+  onSubmit(): void {
     this.submitted = true;
-
     // stop here if form is invalid
     if (this.loginForm.invalid) {
       return;
     }
-
     this.loading = true;
     this.authenticationService.validateLogin(this.f.username.value, this.f.password.value)
       .pipe(first())
@@ -60,5 +58,4 @@ export class LoginComponent implements OnInit {
           this.loading = false;
         });
   }
-
 }

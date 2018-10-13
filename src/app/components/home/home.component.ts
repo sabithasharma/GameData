@@ -19,14 +19,14 @@ export class HomeComponent implements OnInit {
     private gameSearchService: GameSearchService,
     private router: Router) { }
 
-  ngOnInit() {
-     this.getData();
+  ngOnInit(): void {
+    this.getData();
   }
-/**
- * @method onLogout
- * @description - called when logout button clicked. Removes the local token and routes to login page
- */
-  onLogout() {
+  /**
+   * @method onLogout
+   * @description - called when logout button clicked. Removes the local token and routes to login page
+   */
+  onLogout(): void {
     this.authenticationService.logout();
     this.router.navigate(['/login']);
   }
@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
  * @method getData
  * @description - fetches the data from gameSearchService
  */
-  getData() {
+  getData(): void {
     this.gameSearchService.searchGameData().pipe().subscribe(rounds => {
       this.rounds = rounds['rounds'];
     });

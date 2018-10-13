@@ -1,3 +1,7 @@
+/**
+ * Author - Sabitha Sharma L
+ * @description - Activates route based on token - if token is present home page is shown else login page is shown
+ */
 import { Injectable } from '@angular/core';
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 

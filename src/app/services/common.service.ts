@@ -12,15 +12,15 @@ export class CommonService {
   roundHistoryUrl = 'roundhistory/rounds?accountId=60137&dateFrom=2018-08-16T00:30:10Z&operatorId=7';
   constructor() { }
   // Main Url
-  public getGameUrl() {
+  public getGameUrl(): string {
     return this.gameUrl;
   }
-    // Authentication Url
-  public getAuthUrl() {
+  // Authentication Url
+  public getAuthUrl(): string {
     return this.authUrl;
   }
   // RundHistory Url based on from date
-  public getRoundHistoryUrl() {
+  public getRoundHistoryUrl(): string {
     return this.roundHistoryUrl;
   }
 }
